@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Replace basepath to match default github page
-        run: sed -i 's/const\ basepath\ =\ "";/const\ basepath\ =\ "\/SvelteProjects";/g' src/App.svelte
+        run: sed -i 's/<Router>/<Router basepath="\/SvelteProjects">/g' src/App.svelte
       
       - name: Check file after replace basepath
         run: cat src/App.svelte

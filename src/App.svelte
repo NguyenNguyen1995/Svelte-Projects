@@ -5,10 +5,9 @@
 	import NotFound from "./NotFound.svelte";
 	import Calculator from "./projects/Calculator.svelte";
 	import Library from "./projects/Library.svelte";
-	const basepath = "";
 </script>
 
-<Router {basepath}>
+<Router>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">

@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { link, useResolve } from "svelte-navigator";
-    const resolver = useResolve();
+    import { Link } from "svelte-navigator";
 </script>
 
 <div class="page-wrap d-flex flex-row">
@@ -11,9 +10,7 @@
                 <div class="mb-4 lead">
                     The page you are looking for was not found.
                 </div>
-                <a href={resolver("/")} class="btn btn-link" use:link>
-                    Back to Home
-                </a>
+                <Link to="/" class="btn btn-link">Back to Home</Link>
             </div>
         </div>
     </div>
