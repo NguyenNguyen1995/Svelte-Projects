@@ -7,7 +7,7 @@
 	// export let name: string;
 </script>
 
-<Router>
+<Router basepath={process.env.PUBLIC_URL}>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
