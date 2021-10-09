@@ -11,7 +11,7 @@
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
-			<Route path="/">
+			<Route path="">
 				<Home />
 			</Route>
 			<Route path="*">
