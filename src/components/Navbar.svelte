@@ -4,7 +4,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <Link class="navbar-brand" to="/">Svelte Projects</Link>
+        <Link class="navbar-brand" to="/">
+            <img
+                src="images/svelte_logo.png"
+                alt="Blazor Logo"
+                width="30"
+                height="24"
+            /> Svelte Projects
+        </Link>
         <button
             class="navbar-toggler"
             type="button"
