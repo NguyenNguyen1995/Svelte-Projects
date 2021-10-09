@@ -5,9 +5,10 @@
 	import NotFound from "./NotFound.svelte";
 
 	// export let name: string;
+	const base = !process.env.ROLLUP_WATCH ? "SvelteProjects" : "";
 </script>
 
-<Router basepath={"/SvelteProjects/"}>
+<Router basepath={base}>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
