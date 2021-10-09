@@ -26,7 +26,7 @@ jobs:
       
       - name: Check file after replace basepath
         run: cat src/App.svelte
-      
+     
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.1
         with:
@@ -36,6 +36,11 @@ jobs:
         run: |
           npm i
           npm run build
+        
+      # copy index.html to 404.html to serve the same file when a file is not found
+      - name: copy index.html to 404.html
+        run: cp ./public/index.html ./public/404.html
+        
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5

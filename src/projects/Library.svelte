@@ -11,12 +11,12 @@
     onMount(async () => {
         await tick();
         let books = localStorage.getItem("library");
-        if (books !== null || books !== "") {
+        if (books !== null && books !== "") {
             library = [...JSON.parse(books)];
         }
 
         let btnState = localStorage.getItem("btnAddNewBookState");
-        if (btnState !== null || btnState !== "") {
+        if (btnState !== null && btnState !== "") {
             show = JSON.parse(btnState);
         }
     });
