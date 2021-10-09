@@ -21,6 +21,9 @@ jobs:
       - name: Checkout to gh-pages branch
         uses: actions/checkout@v2
       
+      - name: Replace basepath to match default github page
+        uses: sed -i 's/basepath: "\/",/basepath: "\/SvelteProjects",/g' src/main.ts
+      
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.1
         with:
