@@ -3,12 +3,9 @@
 	import Navbar from "./components/Navbar.svelte";
 	import Home from "./Home.svelte";
 	import NotFound from "./NotFound.svelte";
-
-	// export let name: string;
-	const base = !process.env.ROLLUP_WATCH ? "SvelteProjects" : "";
 </script>
 
-<Router basepath={base}>
+<Router basepath={"/SvelteProjects"}>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
