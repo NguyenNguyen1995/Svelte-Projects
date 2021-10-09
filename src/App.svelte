@@ -3,7 +3,7 @@
 	import Navbar from "./components/Navbar.svelte";
 	import Home from "./Home.svelte";
 	import NotFound from "./NotFound.svelte";
-	let base;
+	let base = "/SvelteProjects/";
 </script>
 
 <Router basepath={base}>
