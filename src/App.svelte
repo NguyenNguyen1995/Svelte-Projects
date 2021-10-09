@@ -5,7 +5,7 @@
 	import NotFound from "./NotFound.svelte";
 </script>
 
-<Router basepath={"/SvelteProjects"}>
+<Router basepath="/SvelteProjects">
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
