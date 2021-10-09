@@ -40,3 +40,4 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: public/build # The folder the action should deploy.
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
