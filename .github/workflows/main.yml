@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Replace basepath to match default github page
-        uses: echo pwd .
+        run: echo pwd .
       
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.1
