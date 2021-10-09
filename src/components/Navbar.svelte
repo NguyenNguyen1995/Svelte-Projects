@@ -19,13 +19,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <Link class="nav-link active" to="/">Home</Link>
+                    <Link class="nav-link active" to="/">
+                        <i class="fas fa-home" /> Home
+                    </Link>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link" to="library">Library</Link>
+                    <Link class="nav-link" to="library">
+                        <i class="fas fa-book-open" /> Library
+                    </Link>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link" to="calculator">Calculator</Link>
+                    <Link class="nav-link" to="calculator">
+                        <i class="fas fa-calculator" /> Calculator
+                    </Link>
                 </li>
             </ul>
         </div>
