@@ -7,7 +7,7 @@
 	// export let name: string;
 </script>
 
-<Router basepath={"https://nbn12.github.io/SvelteProjects/"}>
+<Router basepath={"/SvelteProjects/"}>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">

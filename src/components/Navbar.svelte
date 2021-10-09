@@ -4,7 +4,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="" use:link>Svelte Projects</a>
+        <a class="navbar-brand" href="/" use:link>Svelte Projects</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -22,7 +22,7 @@
                     <a
                         class="nav-link active"
                         aria-current="page"
-                        href=""
+                        href="/"
                         use:link
                     >
                         Home
