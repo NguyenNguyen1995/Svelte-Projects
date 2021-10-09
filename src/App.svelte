@@ -3,10 +3,9 @@
 	import Navbar from "./components/Navbar.svelte";
 	import Home from "./Home.svelte";
 	import NotFound from "./NotFound.svelte";
-	let basepath;
 </script>
 
-<Router {basepath}>
+<Router>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
