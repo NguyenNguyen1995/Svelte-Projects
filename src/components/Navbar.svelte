@@ -1,10 +1,13 @@
 <script>
-    import { Link } from "svelte-navigator";
+    import { link, useResolve } from "svelte-navigator";
+    const resolver = useResolve();
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <Link class="navbar-brand" to="">Svelte Projects</Link>
+        <a class="navbar-brand" href={resolver("/")} use:link>
+            Svelte Projects
+        </a>
         <button
             class="navbar-toggler"
             type="button"
@@ -19,15 +22,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to="">
+                    <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href={resolver("/")}
+                    >
                         Home
-                    </Link>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link" to="library">Library</Link>
+                    <a class="nav-link" href={resolver("library")}> Library </a>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link" to="calculator">Calculator</Link>
+                    <a class="nav-link" href={resolver("calculator")}>
+                        Calculator
+                    </a>
                 </li>
             </ul>
         </div>

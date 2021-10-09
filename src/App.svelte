@@ -3,14 +3,23 @@
 	import Navbar from "./components/Navbar.svelte";
 	import Home from "./Home.svelte";
 	import NotFound from "./NotFound.svelte";
+	import Calculator from "./projects/Calculator.svelte";
+	import Library from "./projects/Library.svelte";
+	const basepath = "";
 </script>
 
-<Router>
+<Router {basepath}>
 	<div class="d-flex flex-column h-100">
 		<Navbar />
 		<div class="container-fluid h-100">
-			<Route path="">
+			<Route path="/">
 				<Home />
+			</Route>
+			<Route path="library">
+				<Library />
+			</Route>
+			<Route path="calculator">
+				<Calculator />
 			</Route>
 			<Route path="*">
 				<NotFound />
