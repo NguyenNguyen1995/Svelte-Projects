@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Route, Router } from "svelte-navigator";
 	import Navbar from "./components/Navbar.svelte";
-	import Home from "./Home.svelte";
-	import NotFound from "./NotFound.svelte";
-	import Calculator from "./projects/Calculator.svelte";
-	import Library from "./projects/Library.svelte";
+	import Home from "./pages/Home.svelte";
+	import NotFound from "./pages/NotFound.svelte";
+	import Calculator from "./pages/projects/Calculator.svelte";
+	import Library from "./pages/projects/Library.svelte";
 </script>
 
 <Router>

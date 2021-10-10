@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, tick } from "svelte";
-    import { Book } from "../models";
+    import { Book } from "../../models";
 
     // Declare variables
     let library = [];
