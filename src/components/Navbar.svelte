@@ -7,8 +7,8 @@
     <div class="container-fluid">
         <Link class="navbar-brand" to="/">
             <img
-                src="/images/svelte_logo.png"
-                alt="Blazor Logo"
+                src="images/svelte_logo.png"
+                alt="Svelte Logo"
                 width="30"
                 height="24"
             /> Svelte Projects
