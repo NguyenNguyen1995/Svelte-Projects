@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { text } from "svelte/internal";
-
     let inputTxt = "";
     let stack = new Array(0);
     $: operationTxt = stack.join(" ");
@@ -12,28 +10,21 @@
         inputTxt = "";
     };
 
-    const add = (lhs: number, rhs: number) => lhs + rhs;
-    const substract = (lhs: number, rhs: number) => lhs - rhs;
-    const multiply = (lhs: number, rhs: number) => lhs * rhs;
-    const divide = (lhs: number, rhs: number) => {
-        if (rhs === 0) return Infinity;
-        return lhs / rhs;
-    };
-
     const del = () => {
         inputTxt = inputTxt.slice(0, -1);
     };
 
-    const calculate = (a: number, operator: string, b: number) => {
+    const calculate = (lhs: number, operator: string, rhs: number) => {
         switch (operator) {
             case "+":
-                return add(a, b);
+                return lhs + rhs;
             case "-":
-                return substract(a, b);
+                return lhs - rhs;
             case "x":
-                return multiply(a, b);
+                return lhs * rhs;
             case "/":
-                return divide(a, b);
+                if (rhs === 0) return Infinity;
+                return lhs / rhs;
             default:
                 return "Invalid operator";
         }
@@ -49,7 +40,7 @@
         stack = [...stack, result];
     }
 
-    const appendNum = (e: any) => {
+    const appendNumToInputTxt = (e: any) => {
         let txt = e.target.innerText as string;
 
         if (isOperator(inputTxt)) {
@@ -64,7 +55,7 @@
         inputTxt += txt;
     };
 
-    const appendOpt = (e: any) => {
+    const appendOptToInputTxt = (e: any) => {
         let txt = e.target.innerText as string;
 
         if (inputTxt === "" && stack.length === 0) {
@@ -107,23 +98,23 @@
         <button on:click={reset}>AC</button>
         <button on:click={del}>Del</button>
         <button>%</button>
-        <button on:click={(e) => appendOpt(e)}>/</button>
-        <button on:click={(e) => appendNum(e)}>7</button>
-        <button on:click={(e) => appendNum(e)}>8</button>
-        <button on:click={(e) => appendNum(e)}>9</button>
-        <button on:click={(e) => appendOpt(e)}>x</button>
-        <button on:click={(e) => appendNum(e)}>4</button>
-        <button on:click={(e) => appendNum(e)}>5</button>
-        <button on:click={(e) => appendNum(e)}>6</button>
-        <button on:click={(e) => appendOpt(e)}>+</button>
-        <button on:click={(e) => appendNum(e)}>1</button>
-        <button on:click={(e) => appendNum(e)}>2</button>
-        <button on:click={(e) => appendNum(e)}>3</button>
-        <button on:click={(e) => appendOpt(e)}>-</button>
+        <button on:click={(e) => appendOptToInputTxt(e)}>/</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>7</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>8</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>9</button>
+        <button on:click={(e) => appendOptToInputTxt(e)}>x</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>4</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>5</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>6</button>
+        <button on:click={(e) => appendOptToInputTxt(e)}>+</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>1</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>2</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>3</button>
+        <button on:click={(e) => appendOptToInputTxt(e)}>-</button>
         <button>+/-</button>
-        <button on:click={(e) => appendNum(e)}>0</button>
+        <button on:click={(e) => appendNumToInputTxt(e)}>0</button>
         <button>.</button>
-        <button on:click={(e) => appendOpt(e)}>=</button>
+        <button on:click={(e) => appendOptToInputTxt(e)}>=</button>
     </div>
 </div>
 
