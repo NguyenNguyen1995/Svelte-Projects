@@ -14,11 +14,13 @@
 			<Route path="/">
 				<Home />
 			</Route>
-			<Route path="library">
-				<Library />
-			</Route>
-			<Route path="calculator">
-				<Calculator />
+			<Route path="projects/*" primary={false}>
+				<Route path="library">
+					<Library />
+				</Route>
+				<Route path="calculator">
+					<Calculator />
+				</Route>
 			</Route>
 			<Route path="*">
 				<NotFound />

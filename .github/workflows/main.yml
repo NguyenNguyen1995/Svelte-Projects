@@ -23,6 +23,7 @@ jobs:
       
       - name: Replace basepath to match default github page
         run: sed -i 's/<Router>/<Router basepath="\/SvelteProjects">/g' src/App.svelte
+        run: sed -i 's/<base\ href="\/">/<base\ href="\/SvelteProjects">/g' public/index.html
       
       - name: Check file after replace basepath
         run: cat src/App.svelte
