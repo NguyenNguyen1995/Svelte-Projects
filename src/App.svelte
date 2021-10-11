@@ -10,7 +10,7 @@
 </script>
 
 <Router>
-	<div class="d-flex flex-column h-100">
+	<div class="d-flex flex-column h-100" style="overflow: auto;">
 		<Navbar />
 		<div class="container-fluid h-100">
 			<Route path="/">

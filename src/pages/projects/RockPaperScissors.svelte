@@ -128,6 +128,8 @@
     <title>Svelte Projects - Rock Paper Scissors</title>
 </svelte:head>
 
+<base href="" />
+
 <h3 class="text-center mb-3">Rock Paper Scissors</h3>
 
 <h2
