@@ -128,8 +128,6 @@
     <title>Svelte Projects - Rock Paper Scissors</title>
 </svelte:head>
 
-<base href="" />
-
 <h3 class="text-center mb-3">Rock Paper Scissors</h3>
 
 <h2
@@ -154,7 +152,7 @@
                 on:click={() => playerChoose(Choices.Rock)}
             >
                 <img
-                    src="images/rock.jpg"
+                    src="/images/rock.jpg"
                     alt="rock"
                     width="150"
                     height="150"
@@ -167,7 +165,7 @@
                 on:click={() => playerChoose(Choices.Paper)}
             >
                 <img
-                    src="images/paper.jpg"
+                    src="/images/paper.jpg"
                     alt="rock"
                     width="150"
                     height="150"
@@ -180,7 +178,7 @@
                 on:click={() => playerChoose(Choices.Scissors)}
             >
                 <img
-                    src="images/scissors.jpg"
+                    src="/images/scissors.jpg"
                     alt="rock"
                     width="150"
                     height="150"
@@ -202,7 +200,7 @@
 
 <div class="display mt-5">
     <img
-        src="images/player.jpg"
+        src="/images/player.jpg"
         alt="You"
         title="You"
         width="200"
@@ -212,7 +210,7 @@
     <span class="score-panel">VS</span>
     <span class="score-panel" title="Machine Score">{machineScore}</span>
     <img
-        src="images/machine.png"
+        src="/images/machine.png"
         alt="Machine"
         title="Machine"
         width="200"
