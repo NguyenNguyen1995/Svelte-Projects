@@ -7,11 +7,12 @@
 	import EtchASketch from "./pages/projects/EtchASketch.svelte";
 	import Library from "./pages/projects/Library.svelte";
 	import RockPaperScissors from "./pages/projects/RockPaperScissors.svelte";
+	let basepath = "";
 </script>
 
-<Router>
+<Router {basepath}>
 	<div class="d-flex flex-column h-100" style="overflow: auto;">
-		<Navbar />
+		<Navbar {basepath} />
 		<div class="container-fluid h-100">
 			<Route path="/">
 				<Home />
@@ -24,7 +25,7 @@
 					<Calculator />
 				</Route>
 				<Route path="rock-paper-scissors">
-					<RockPaperScissors />
+					<RockPaperScissors {basepath} />
 				</Route>
 				<Route path="etch-a-sketch">
 					<EtchASketch />

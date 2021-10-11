@@ -1,4 +1,5 @@
 <script lang="ts">
+    export let basepath;
     const maxScore = 3;
     $: playerScore = 0;
     $: machineScore = 0;
@@ -152,7 +153,7 @@
                 on:click={() => playerChoose(Choices.Rock)}
             >
                 <img
-                    src="/images/rock.jpg"
+                    src="{basepath}/images/rock.jpg"
                     alt="rock"
                     width="150"
                     height="150"
@@ -165,7 +166,7 @@
                 on:click={() => playerChoose(Choices.Paper)}
             >
                 <img
-                    src="/images/paper.jpg"
+                    src="{basepath}/images/paper.jpg"
                     alt="rock"
                     width="150"
                     height="150"
@@ -178,7 +179,7 @@
                 on:click={() => playerChoose(Choices.Scissors)}
             >
                 <img
-                    src="/images/scissors.jpg"
+                    src="{basepath}/images/scissors.jpg"
                     alt="rock"
                     width="150"
                     height="150"
@@ -200,7 +201,7 @@
 
 <div class="display mt-5">
     <img
-        src="/images/player.jpg"
+        src="{basepath}/images/player.jpg"
         alt="You"
         title="You"
         width="200"
@@ -210,7 +211,7 @@
     <span class="score-panel">VS</span>
     <span class="score-panel" title="Machine Score">{machineScore}</span>
     <img
-        src="/images/machine.png"
+        src="{basepath}/images/machine.png"
         alt="Machine"
         title="Machine"
         width="200"
