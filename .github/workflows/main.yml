@@ -31,7 +31,7 @@ jobs:
       #   run: cat src/App.svelte
 
       - name: Create _config.yml
-        run: echo 'base:\ /SvelteProjects' > public/_config.yml
+        run: echo 'base: /SvelteProjects' > public/_config.yml
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.1
