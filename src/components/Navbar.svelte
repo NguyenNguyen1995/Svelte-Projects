@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <Link class="navbar-brand" to="/">
             <img
-                src="images/svelte_logo.png"
+                src="/images/svelte_logo.png"
                 alt="Svelte Logo"
                 width="30"
                 height="24"
