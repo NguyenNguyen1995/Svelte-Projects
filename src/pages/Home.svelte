@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Svelte Projects - Home</title>
+</svelte:head>
 <h1 class="text-center">This is home page</h1>
 
 <style>

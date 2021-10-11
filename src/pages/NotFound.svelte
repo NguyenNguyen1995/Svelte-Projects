@@ -2,6 +2,10 @@
     import { Link } from "svelte-navigator";
 </script>
 
+<svelte:head>
+    <title>Svelte Projects - 404</title>
+</svelte:head>
+
 <div class="page-wrap d-flex flex-row">
     <div class="container">
         <div class="row justify-content-center">

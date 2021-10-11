@@ -78,7 +78,7 @@
 </script>
 
 <svelte:head>
-    <title>Project - Library</title>
+    <title>Svelte Projects - Library</title>
 </svelte:head>
 
 <h3 class="text-center mb-3">My Library</h3>

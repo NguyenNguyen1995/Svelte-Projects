@@ -40,15 +40,28 @@
         }
     };
 
+    const displayFormat = (
+        className: string,
+        roundNumber: number,
+        choice: Choices
+    ) =>
+        `<span class='${className}'><strong>Round ${roundNumber}</strong>: ${Choices[choice]}<br/></span>`;
+
     const playerChoose = (playerChoice: Choices) => {
         let machineChoice = machinePlay();
 
-        displayPlayerChoice += `<strong>Round ${roundNumber}</strong>: ${Choices[playerChoice]}<br/>`;
-        displayMachineChoice += `<strong>Round ${roundNumber}</strong>: ${Choices[machineChoice]}<br/>`;
-
         // Draw case
         if (playerChoice === machineChoice) {
-            displayBanner = `Round ${roundNumber}: Draw`;
+            displayPlayerChoice += displayFormat(
+                "bg-secondary",
+                roundNumber,
+                playerChoice
+            );
+            displayMachineChoice += displayFormat(
+                "bg-secondary",
+                roundNumber,
+                machineChoice
+            );
             roundNumber += 1;
             return;
         }
@@ -78,9 +91,25 @@
             }
         }
 
-        displayBanner = `Round ${roundNumber}: ${
-            isMachineWin ? "Machine" : "You"
-        } wins`;
+        if (isMachineWin) {
+            displayPlayerChoice += displayFormat("", roundNumber, playerChoice);
+            displayMachineChoice += displayFormat(
+                "bg-success",
+                roundNumber,
+                machineChoice
+            );
+        } else {
+            displayPlayerChoice += displayFormat(
+                "bg-success",
+                roundNumber,
+                playerChoice
+            );
+            displayMachineChoice += displayFormat(
+                "",
+                roundNumber,
+                machineChoice
+            );
+        }
         roundNumber += 1;
     };
 
@@ -90,6 +119,7 @@
         } else {
             displayBanner = "You wins";
         }
+        alert("Game has end");
         winner = true;
     }
 </script>
@@ -100,7 +130,11 @@
 
 <h3 class="text-center mb-3">Rock Paper Scissors</h3>
 
-<h2 class="w-25 bg-danger text-white text-center mx-auto">
+<h2
+    class="w-50 {winner
+        ? 'bg-danger'
+        : 'bg-secondary'} text-white text-center mx-auto"
+>
     {displayBanner}
 </h2>
 
@@ -116,19 +150,40 @@
                 title="rock"
                 disabled={winner}
                 on:click={() => playerChoose(Choices.Rock)}
-            />
+            >
+                <img
+                    src="images/rock.jpg"
+                    alt="rock"
+                    width="150"
+                    height="150"
+                />
+            </button>
             <button
                 class="paper"
                 title="paper"
                 disabled={winner}
                 on:click={() => playerChoose(Choices.Paper)}
-            />
+            >
+                <img
+                    src="images/paper.jpg"
+                    alt="rock"
+                    width="150"
+                    height="150"
+                />
+            </button>
             <button
                 class="scissors"
                 title="scissors"
                 disabled={winner}
                 on:click={() => playerChoose(Choices.Scissors)}
-            />
+            >
+                <img
+                    src="images/scissors.jpg"
+                    alt="rock"
+                    width="150"
+                    height="150"
+                />
+            </button>
         </div>
         <div class="col-2 text-center log-panel">
             <h3>Machine</h3>
@@ -137,7 +192,7 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-center mt-3">
+<div class="d-flex justify-content-center">
     <button class="btn btn-danger" on:click={restartGame}>
         Restart Game
     </button>
@@ -145,7 +200,7 @@
 
 <div class="display mt-5">
     <img
-        src="/images/player.jpg"
+        src="images/player.jpg"
         alt="You"
         title="You"
         width="200"
@@ -155,7 +210,7 @@
     <span class="score-panel">VS</span>
     <span class="score-panel" title="Machine Score">{machineScore}</span>
     <img
-        src="/images/machine.png"
+        src="images/machine.png"
         alt="Machine"
         title="Machine"
         width="200"
@@ -171,23 +226,7 @@
         padding: 0;
         min-width: 150px;
         min-height: 150px;
-        background-color: transparent;
         outline: none;
-        background-position: 50% 50%;
-        background-size: 150px;
-        background-repeat: no-repeat;
-    }
-
-    .rock {
-        background-image: url(/images/rock.jpg);
-    }
-
-    .paper {
-        background-image: url(/images/paper.jpg);
-    }
-
-    .scissors {
-        background-image: url(/images/scissors.jpg);
     }
 
     .score-panel {

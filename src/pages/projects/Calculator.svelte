@@ -74,7 +74,7 @@
 </script>
 
 <svelte:head>
-    <title>Projects - Calculator</title>
+    <title>Svelte Projects - Calculator</title>
 </svelte:head>
 
 <div class="calculator">

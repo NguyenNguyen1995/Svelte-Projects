@@ -4,6 +4,7 @@
 	import Home from "./pages/Home.svelte";
 	import NotFound from "./pages/NotFound.svelte";
 	import Calculator from "./pages/projects/Calculator.svelte";
+	import EtchASketch from "./pages/projects/EtchASketch.svelte";
 	import Library from "./pages/projects/Library.svelte";
 	import RockPaperScissors from "./pages/projects/RockPaperScissors.svelte";
 </script>
@@ -24,6 +25,9 @@
 				</Route>
 				<Route path="rock-paper-scissors">
 					<RockPaperScissors />
+				</Route>
+				<Route path="etch-a-sketch">
+					<EtchASketch />
 				</Route>
 			</Route>
 			<Route path="*">

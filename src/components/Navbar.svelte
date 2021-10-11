@@ -71,6 +71,14 @@
                                 Rock Paper Scissors
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                class="dropdown-item"
+                                to="{projectsPrefix}/etch-a-sketch"
+                            >
+                                <i class="fas fa-pencil-ruler" /> Etch A Sketch
+                            </Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
