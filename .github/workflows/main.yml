@@ -21,11 +21,11 @@ jobs:
       - name: Checkout to gh-pages branch
         uses: actions/checkout@v2
       
-      # - name: Replace basepath to match default github page
-      #   run: sed -i 's/<Router>/<Router basepath="\/SvelteProjects">/g' src/App.svelte
+      - name: Replace basepath to match default github page
+        run: sed -i 's/<Router>/<Router basepath="\/SvelteProjects">/g' src/App.svelte
 
-      # - name: Replace path of base tag to match default github page
-      #   run: sed -i 's/<base\ href="\/">/<base\ href="{{site.baseurl}}">/g' public/index.html
+      - name: Replace path of base tag to match default github page
+        run: sed -i 's/<base\ href="\/">/<base\ href="{{site.baseurl}}">/g' public/index.html
       
       # - name: Check file after replace basepath
       #   run: cat src/App.svelte
