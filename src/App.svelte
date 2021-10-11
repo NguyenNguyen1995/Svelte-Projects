@@ -5,6 +5,7 @@
 	import NotFound from "./pages/NotFound.svelte";
 	import Calculator from "./pages/projects/Calculator.svelte";
 	import Library from "./pages/projects/Library.svelte";
+	import RockPaperScissors from "./pages/projects/RockPaperScissors.svelte";
 </script>
 
 <Router>
@@ -20,6 +21,9 @@
 				</Route>
 				<Route path="calculator">
 					<Calculator />
+				</Route>
+				<Route path="rock-paper-scissors">
+					<RockPaperScissors />
 				</Route>
 			</Route>
 			<Route path="*">

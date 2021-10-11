@@ -63,6 +63,14 @@
                                 <i class="fas fa-calculator" /> Calculator
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                class="dropdown-item"
+                                to="{projectsPrefix}/rock-paper-scissors"
+                            >
+                                Rock Paper Scissors
+                            </Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
