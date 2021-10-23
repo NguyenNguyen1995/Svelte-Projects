@@ -25,7 +25,7 @@ jobs:
       #   run: sed -i 's/<Router>/<Router basepath="\/SvelteProjects">/g' src/App.svelte
 
       - name: Replace basepath to match default github page
-        run: sed -i 's/let\ basepath\ =\ "";/let\ basepath\ =\ "\/SvelteProjects";/g' src/App.svelte
+        run: sed -i 's/let\ basepath\ =\ "";/let\ basepath\ =\ "\/Svelte-Projects";/g' src/App.svelte
 
       - name: Replace path of base tag to match default github page
         run: sed -i 's/<base\ href="\/">/<base\ href="">/g' public/index.html
