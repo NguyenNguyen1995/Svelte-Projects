@@ -7,6 +7,7 @@
 	import EtchASketch from "./pages/projects/EtchASketch.svelte";
 	import Library from "./pages/projects/Library.svelte";
 	import RockPaperScissors from "./pages/projects/RockPaperScissors.svelte";
+	import Weather from "./pages/projects/Weather.svelte";
 	let basepath = "";
 </script>
 
@@ -29,6 +30,9 @@
 				</Route>
 				<Route path="etch-a-sketch">
 					<EtchASketch />
+				</Route>
+				<Route path="weather">
+					<Weather />
 				</Route>
 			</Route>
 			<Route path="*">

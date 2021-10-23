@@ -80,6 +80,14 @@
                                 <i class="fas fa-pencil-ruler" /> Etch A Sketch
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                class="dropdown-item"
+                                to="{projectsPrefix}/weather"
+                            >
+                                <i class="fas fa-cloud-sun-rain" /> Weather
+                            </Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
